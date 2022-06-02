@@ -77,10 +77,10 @@ const RestaurantInfo = ({ name, rating }) => (
   </View>
 );
 
-const RestaurantItem = () => {
+const RestaurantItems = ({ restaurantData, navigation }) => {
   return (
     <TouchableOpacity activeOpacity={1} style={{ marginBottom: 30 }}>
-      {localRestaurants.map((restaurant, index) => (
+      {restaurantData.map((restaurant, index) => (
         <View
           key={index}
           style={{ marginTop: 10, padding: 15, backgroundColor: "white" }}
@@ -93,4 +93,4 @@ const RestaurantItem = () => {
   );
 };
 
-export default RestaurantItem;
+export default RestaurantItems;
